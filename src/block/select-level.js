@@ -121,8 +121,11 @@ function selectLevel(){
         if(complexity === undefined){
             return;
         }
-        console.log('СЛОЖНОСТЬ: ',complexity)
+        // Init global complexity
+        window.application.setting.complexity = complexity;
+        renderGameSetting(window.application.setting.complexity);
     })
+
 
     const label = document.querySelectorAll('.select-level__complexity-label');
     label.forEach( e => {
@@ -131,4 +134,10 @@ function selectLevel(){
             event.target.style.color = 'green';
         })
     })
-}   
+}
+
+
+function renderGameSetting(complexity){
+    window.application.setting.cardOfGame = complexity * 6;
+    window.application.renderScreen('game-screen');
+}
