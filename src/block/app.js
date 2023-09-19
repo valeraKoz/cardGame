@@ -2,11 +2,16 @@ window.application = {
     block:{
     },
     screen:{
-        "select-level" : selectLevel
+        "select-level" : selectLevel,
+        "game-screen": gameScreen
     },
     renderBlock: renderBlock,
     renderScreen: renderScreen,
-    body: document.querySelector('.app')
+    body: document.querySelector('.app'),
+    setting: {
+        complexity: undefined,
+        cardOfGame: undefined,
+    }
 }
 
 function renderBlock(blockName, container){
