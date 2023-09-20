@@ -124,6 +124,7 @@ function selectLevel(){
         // Init global complexity
         window.application.setting.complexity = complexity;
         renderGameSetting(window.application.setting.complexity);
+        deckBuilder();
     })
 
 
