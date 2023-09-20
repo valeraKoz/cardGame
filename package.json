@@ -1,0 +1,22 @@
+{
+  "name": "cardgame",
+  "version": "1.0.0",
+  "description": "Create Card Game by Hellcat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valeraKoz/cardGame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valeraKoz/cardGame/issues"
+  },
+  "homepage": "https://github.com/valeraKoz/cardGame#readme",
+  "dependencies": {
+    "lodash": "4.17.21"
+  }
+}

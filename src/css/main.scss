@@ -18,7 +18,11 @@
 
     background-color: #004980;
 }
-
+.app__game-screen{
+    justify-content: start;
+    display: flex;
+    flex-direction: column;
+}
 .select-level{
     padding: 50px 70px;
     background-color: #C2F5FF;
@@ -76,6 +80,59 @@
         }
         &:active{
             transform: scale(1.05);
+        }
+    }
+}
+.app__header{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+}
+.app__cards{
+    width: 45%;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+.card{
+    background-color: #fff;
+    border-radius: 4px;
+    border: none;
+    padding: 5px 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    &__header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 80px;
+        font-size: 24px;
+        &_value{
+            min-width: 27px;
+            text-align: center;
+        }
+        &_suits{
+            width: 7px;
+        }
+    }
+    &__footer{
+        padding-left: 80px;
+        font-size: 24px;
+        transform: scaleY(-1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_value{
+            min-width: 27px;
+            text-align: center;
+        }
+        &_suits{
+            width: 7px;
         }
     }
 }
