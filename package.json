@@ -4,7 +4,8 @@
   "description": "Create Card Game by Hellcat",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --mode development --open",
+    "dev": "webpack --mode development"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/valeraKoz/cardGame#readme",
   "dependencies": {
     "lodash": "4.17.21"
+  },
+  "devDependencies": {
+    "sass": "^1.68.0"
   }
 }

@@ -10,16 +10,16 @@ class Timer{
         const secondsTimer = setInterval(()=>{
             if(this.seconds < 10){
                 if(this.minutes < 10){
-                    this.element.innerHTML = `0${this.minutes}.0${this.seconds+1}`;
+                    this.element.innerHTML = `0${this.minutes}.0${this.seconds}`;
                 } else{
-                    this.element.innerHTML = `${this.minutes}.0${this.seconds+1}`
+                    this.element.innerHTML = `${this.minutes}.0${this.seconds}`
                 }
                 
             } else {
                 if(this.minutes < 10){
-                    this.element.innerHTML = `0${this.minutes}.${this.seconds+1}`;
+                    this.element.innerHTML = `0${this.minutes}.${this.seconds}`;
                 } else{
-                    this.element.innerHTML = `${this.minutes}.${this.seconds+1}`
+                    this.element.innerHTML = `${this.minutes}.${this.seconds}`
                 }
                 
             }
