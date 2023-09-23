@@ -4,8 +4,6 @@ function gameScreen(){
     console.log('Кол-во карточек: ',window.application.setting.cardOfGame);
     window.application.body.classList.add('app__game-screen');
 
-    
-
     window.application.body.appendChild(templateEngine({
         tag: 'div',
         cls: 'app__header',
@@ -26,9 +24,11 @@ function gameScreen(){
         cls: 'app__cards'
     }))
 
-    window.application.appTimer = new Timer(document.querySelector('.app__timer'));
+    
+    
+    
+    // Обработчик кнопки РЕСЕТ
     const appReset = document.querySelector('.app__reset');
-
     appReset.addEventListener('click', ()=>{
         resetGame();
     })

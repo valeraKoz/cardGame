@@ -29,4 +29,37 @@ function deckBuilder(){
     cardsInGame.forEach( el => {
         window.application.renderBlock('card',document.querySelector('.app__cards'),el);
     })
+
+    cardsSetting();
+}
+
+function cardsSetting(){
+    const cards = document.querySelectorAll('.card');
+
+    setTimeout(()=>{
+        window.application.appTimer = new Timer(document.querySelector('.app__timer'));
+        cards.forEach(el=>{
+            hideCard(el);
+            el.addEventListener('click', cardsEventOnClick);
+        })
+    },5000)
+}
+
+function cardsEventOnClick(event){
+    const target = event.currentTarget;
+    showCards(target);
+    window.application.compareCard.push(target.getAttribute('data-value'));
+    if(window.application.compareCard.length == 2){
+
+        if(window.application.compareCard[0] === window.application.compareCard[1]){
+            window.application.compareCard = [];
+            window.application.setting.cardOfGame -=2;
+        } else{
+            loseGame();
+        }
+    }
+    
+    if(window.application.setting.cardOfGame === 0){
+        winGame();
+    }
 }
